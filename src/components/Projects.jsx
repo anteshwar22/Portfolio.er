@@ -24,7 +24,7 @@ const dummyProjects = [
     _id: '3',
     title: 'EduPulse',
     description: 'Edupulse is online learning platform  in that the entire system is like school ',
-    imageUrl: 'https://edupluse1.onrender.com/edupulse-logo.png'
+    imageUrl: 'https://edupluse1.onrender.com/edupulse-logo.png',
     technologies: ['Mern Stack Project '],
     githubLink: '#',
     liveLink: 'https://edupluse1.onrender.com/'
