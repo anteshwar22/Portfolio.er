@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="home" className="hero-section">
       <div className="hero-content">
         <h4 className="greeting">Hi, my name is</h4>
-        <h1 className="name">John Doe.</h1>
+        <h1 className="name">Anteshwar Waghmare.</h1>
         <h2 className="title gradient-text">I build things for the web.</h2>
         <p className="description">
           I'm a full-stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products using the MERN stack.

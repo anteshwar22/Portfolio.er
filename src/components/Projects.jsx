@@ -22,12 +22,12 @@ const dummyProjects = [
   },
   {
     _id: '3',
-    title: 'Weather Dashboard',
-    description: 'A beautiful weather application providing real-time forecasts, interactive maps, and weather alerts using the OpenWeather API.',
-    imageUrl: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop',
-    technologies: ['React', 'API', 'Chart.js', 'CSS3'],
+    title: 'EduPulse',
+    description: 'Edupulse is online learning platform  in that the entire system is like school ',
+    imageUrl: 'https://edupluse1.onrender.com/edupulse-logo.png'
+    technologies: ['Mern Stack Project '],
     githubLink: '#',
-    liveLink: '#'
+    liveLink: 'https://edupluse1.onrender.com/'
   }
 ];
 
