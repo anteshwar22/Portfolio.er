@@ -15,7 +15,7 @@ const Admin = () => {
   const [editId, setEditId] = useState(null);
   const [message, setMessage] = useState('');
 
-  const API_BASE = 'https://anteshwar-back.onrender.com/api/projects';
+  const API_BASE = 'https://anteshwar-dev.onrender.com/admin';
 
   const fetchProjects = async () => {
     try {
