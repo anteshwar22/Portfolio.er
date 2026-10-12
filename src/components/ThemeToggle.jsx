@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 
-const ThemeToggle = ({ className = '' }) => {
+const ThemeToggle = ({ className = '', compact = false, showLabels = true }) => {
   const { theme, setTheme } = useTheme();
 
   const modes = [
@@ -57,7 +57,9 @@ const ThemeToggle = ({ className = '' }) => {
             role="radio"
             aria-checked={isActive}
             onClick={() => setTheme(mode.id)}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer min-h-[32px] ${
+              compact ? 'px-2 py-1.5' : 'px-2.5 py-1.5'
+            } ${
               isActive
                 ? 'bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] shadow-md scale-[1.02]'
                 : 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)]'
@@ -65,7 +67,13 @@ const ThemeToggle = ({ className = '' }) => {
             title={`Switch to ${mode.label} mode`}
           >
             <span className={isActive ? 'animate-none' : ''}>{mode.icon}</span>
-            <span className="capitalize">{mode.label}</span>
+            {showLabels && !compact && (
+              <span className="capitalize">{mode.label}</span>
+            )}
+            {/* If not compact, but responsive: allow hiding label on xs screens unless forced */}
+            {!compact && !showLabels && (
+              <span className="sr-only">{mode.label}</span>
+            )}
           </button>
         );
       })}
