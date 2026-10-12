@@ -2,31 +2,28 @@ import React, { useState, useEffect } from 'react';
 
 const dummyProjects = [
   {
-    _id: '1',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce platform built with MERN stack. Includes user authentication, product catalog, shopping cart, and Stripe payment integration.',
-    imageUrl: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    githubLink: 'https://github.com/anteshwar22',
-    liveLink: '#'
+    _id: "6accc76ba65ed117c9d51187",
+    title: "Random Innovators Page",
+    description: "Random Innovators is a full-stack web application designed to manage and showcase team members, organizational information, and educational or informational video content through a centralized platform. It provides a responsive public-facing website and an admin dashboard for managing content dynamically.",
+    imageUrl: "https://random-innovators.onrender.com/",
+    technologies: ["Reactjs", "Nodejs", "MongoDB", "Expressjs"],
+    githubLink: "https://github.com/anteshwar22/new-random_innovators-client",
+    liveLink: "https://random-innovators.onrender.com/",
+    createdAt: "2026-10-12T11:41:31.593Z",
+    updatedAt: "2026-10-12T11:41:31.593Z",
+    __v: 0
   },
   {
-    _id: '2',
-    title: 'Task Management App',
-    description: 'A responsive kanban board application for managing tasks and team sprints with real-time updates and intuitive drag-and-drop workflow.',
-    imageUrl: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-    technologies: ['React', 'Tailwind CSS', 'Redux', 'Node.js'],
-    githubLink: 'https://github.com/anteshwar22',
-    liveLink: '#'
-  },
-  {
-    _id: '3',
-    title: 'EduPulse Platform',
-    description: 'EduPulse is an online interactive learning management system designed to emulate a cohesive virtual school environment.',
-    imageUrl: 'https://edupluse1.onrender.com/edupulse-logo.png',
-    technologies: ['MERN Stack', 'REST APIs', 'JWT Auth'],
-    githubLink: 'https://github.com/anteshwar22',
-    liveLink: 'https://edupluse1.onrender.com/'
+    _id: "6accc893a65ed117c9d51188",
+    title: "EduPulse – Interactive Learning Platform",
+    description: "EduPulse is a full-stack web application designed to provide an interactive and centralized learning environment for students and teachers. The platform enables students to explore classes and courses, enroll in learning programs, and access online meeting links, while teachers can create and manage courses. An administrative dashboard allows administrators to manage users, classes, and educational content efficiently.",
+    imageUrl: "https://edupluse1.onrender.com/",
+    technologies: ["Reactjs", "Nodejs", "Expressjs", "MongoDB", "Tailwindcss"],
+    githubLink: "",
+    liveLink: "https://edupluse1.onrender.com/",
+    createdAt: "2026-10-12T11:46:27.093Z",
+    updatedAt: "2026-10-12T11:46:27.093Z",
+    __v: 0
   }
 ];
 
