@@ -35,7 +35,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://anteshwar-back.onrender.com/')
+    fetch('https://anteshwar-back.onrender.com/api/projects')
       .then(res => res.json())
       .then(data => {
         if (data && data.length > 0) {
@@ -53,7 +53,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-16 sm:py-24 relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       {/* Section Header */}
       <div className="mb-12 sm:mb-16 flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--badge-bg)] border border-[var(--badge-border)] text-[var(--badge-text)] font-medium text-xs mb-3 tracking-wide uppercase transition-colors duration-300">
@@ -80,23 +80,23 @@ const Projects = () => {
             const hasLive = project.liveLink && project.liveLink !== '#';
 
             return (
-              <div 
-                key={project._id} 
+              <div
+                key={project._id}
                 className="glass rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-all duration-300 border border-[var(--border-subtle)] hover:border-[var(--border-hover)] shadow-lg"
               >
                 {/* Image Container */}
                 <div className="relative h-48 sm:h-56 overflow-hidden bg-[var(--bg-card-solid)]">
                   <div className="absolute inset-0 bg-[var(--bg-page)]/20 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
-                  <img 
-                    src={project.imageUrl} 
-                    alt={project.title} 
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     loading="lazy"
                     onError={(e) => {
                       e.target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop';
                     }}
                   />
-                  
+
                   {/* Desktop Hover Overlay */}
                   <div className="hidden lg:flex absolute inset-0 bg-[var(--bg-page)]/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 items-center justify-center gap-5">
                     {hasGithub && (
@@ -131,11 +131,11 @@ const Projects = () => {
                   <h3 className="text-lg sm:text-xl font-heading font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--btn-primary-bg)] transition-colors duration-300">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-[var(--text-muted)] text-xs sm:text-sm leading-relaxed mb-4 flex-grow transition-colors duration-300">
                     {project.description}
                   </p>
-                  
+
                   <ul className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                     {project.technologies.map((tech, index) => (
                       <li key={index} className="text-[11px] sm:text-xs font-medium px-2.5 py-1 rounded-md bg-[var(--badge-bg)] text-[var(--badge-text)] border border-[var(--badge-border)] transition-colors duration-300">
@@ -163,9 +163,8 @@ const Projects = () => {
                         href={project.githubLink}
                         target="_blank"
                         rel="noreferrer"
-                        className={`py-2 px-3 rounded-xl bg-[var(--bg-card-solid)] border border-[var(--border-subtle)] hover:border-[var(--border-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors active:scale-95 min-h-[38px] ${
-                          hasLive ? 'flex-1' : 'w-full'
-                        }`}
+                        className={`py-2 px-3 rounded-xl bg-[var(--bg-card-solid)] border border-[var(--border-subtle)] hover:border-[var(--border-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors active:scale-95 min-h-[38px] ${hasLive ? 'flex-1' : 'w-full'
+                          }`}
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         <span>Code Repo</span>
